@@ -13,8 +13,7 @@ output:
   bookdown::html_document2: default
   bookdown::word_document2:
     toc: true
-  keep_tex:  true
-    
+
 ---
 
 ```{r global pars, eval=TRUE, echo=FALSE, results='hide'}
