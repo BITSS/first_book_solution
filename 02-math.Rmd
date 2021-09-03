@@ -17,7 +17,7 @@ p(n= `r n.pers`) &= `r  round(1 - factorial(n.pers) * choose(365,n.pers)/ 365^n.
 
 Copy and paste lines below into your `first_dd.Rmd`
 
-```{latex, eval=FALSE}
+```{md, eval=FALSE}
 \begin{align} 
  1 -  p(n) &= 1 \times \left(1-\frac{1}{365}\right) \times
               \left(1-\frac{2}{365}\right) \times \cdots \times
