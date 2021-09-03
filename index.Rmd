@@ -6,8 +6,15 @@ site: bookdown::bookdown_site
 documentclass: book
 biblio-style: apalike
 link-citations: yes
+always_allow_html: true
 github-repo: BITSS/first_book_solution
 description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
+output:
+  bookdown::html_document2: default
+  bookdown::word_document2:
+    toc: true
+  keep_tex:  true
+    
 ---
 
 ```{r global pars, eval=TRUE, echo=FALSE, results='hide'}
