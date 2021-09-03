@@ -1,0 +1,32 @@
+# The birthday problem: the math
+
+Actually the math says otherwise. Define p(n) as the probability that at least one pair has the same birthday, then the $1 - p(n)$ is the probability that all are born in a different day. Which we can compute as: 
+
+--
+
+\begin{align} 
+ 1 -  p(n) &= 1 \times \left(1-\frac{1}{365}\right) \times \left(1-\frac{2}{365}\right) \times \cdots \times \left(1-\frac{n-1}{365}\right) \nonumber  \newline
+ &= \frac{ 365 \times 364 \times \cdots \times (365-n+1) }{ 365^n } \nonumber \newline
+ &= \frac{ 365! }{ 365^n (365-n)!} = \frac{n!\cdot\binom{365}{n}}{365^n}\newline
+p(n= `r n.pers`) &= `r  round(1 - factorial(n.pers) * choose(365,n.pers)/ 365^n.pers, 3)`  \nonumber
+\end{align}
+
+## Code for the math 
+
+(`/dynamicdocs/first_dd_solution.Rmd`)
+
+Copy and paste lines below into your `first_dd.Rmd`
+
+```{latex, eval=FALSE}
+\begin{align} 
+ 1 -  p(n) &= 1 \times \left(1-\frac{1}{365}\right) \times
+              \left(1-\frac{2}{365}\right) \times \cdots \times
+              \left(1-\frac{n-1}{365}\right) \nonumber  \newline
+           &= \frac{365 \times 364 \times \cdots \times (365-n+1) }{365^n} \nonumber \newline
+           &= \frac{ 365! }{ 365^n (365-n)!} = \frac{n!\cdot\binom{365}{n}}{365^n}\newline
+\p(n= `r n.pers`) &= `r  round(1 - factorial(n.pers) * 
+                          choose(365,n.pers)/ 365^n.pers, 3)`  \nonumber
+\end{align}
+```
+
+

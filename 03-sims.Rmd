@@ -1,0 +1,36 @@
+# Don't like math? Let's run a simple simulation!   
+
+
+ 1 - Simulate `r n.sims` rooms with $n = `r n.pers`$ random birthdays, and store the results in matrix where each row represents a room.   
+ 
+ 2 - For each room (row) compute the number of unique birthdays.   
+ 
+ 3 - Compute the average number of times a room has `r n.pers` unique birthdays, across `r n.sims` simulations, and report the complement.    
+
+
+
+
+## Code for the simulation 
+
+(`/dynamicdocs/first_dd_solution.Rmd`)  
+
+
+```{r birthday prob, eval=TRUE, echo=TRUE}
+birthday.prob = function(n.pers_var, n.sims_var) {
+  # simulate birthdays
+  birthdays = matrix(round(runif(n = n.pers_var * n.sims_var, min = 1, max = 365) ),
+                     nrow = n.sims_var, ncol = n.pers_var)
+  # for each room (row) get unique birthdays
+  unique.birthdays = apply(birthdays, 1,
+                           function(x)  length( unique(x) ) )
+  # Indicator with 1 if all are unique birthdays
+  all.different = 1 * (unique.birthdays==n.pers_var)
+  # Compute average time all have different birthdays 
+  result = 1 - mean(all.different)
+return(result)
+}
+
+bp_sim = birthday.prob(n.pers_var = 21, n.sims_var = 10000)
+print(bp_sim)
+```
+

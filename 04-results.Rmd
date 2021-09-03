@@ -1,0 +1,31 @@
+# Results   
+
+
+- Many people originally think of a prob ~ $\frac{1}{365} \times n =   `r round(1/365 * n.pers, 3)`$
+
+- However the true probability is of $p(n= `r n.pers`) = `r round(1 - factorial(n.pers) * choose(365,n.pers)/ 365^n.pers, 3)`$
+
+- And the simulated probability is of  $`r bp_sim`$
+]
+
+<!--
+asd <- sapply(1:365, function(x) round(1 - factorial(x) * 
++           choose(365,x)/ 365^x, 3) )
+
+plot(1:100, asd[1:100], type = "l")
+
+
+> asd1 <- function(y) sapply(1:100, function(x) birthday.prob(n.pers_var = x, y) )
+
+
+> lines(asd1(5), col="red")
+> lines(asd1(30), col="blue")
+> lines(asd1(100), col="green")
+> points(asd1(1000), pch=3)
+legend(60, 0.3, legend=c("5 sims", "30 sims", "100 sims", "1000 sims"),
++        col=c("red", "blue", "green", "black"), lty=c(1,1,1,3), cex=0.8)
+
+title(main="main title", sub="sub-title", 
+   xlab="x-axis label", ylab="y-axis label")
+
+-->
