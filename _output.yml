@@ -14,3 +14,7 @@ bookdown::pdf_book:
   citation_package: natbib
   keep_tex: yes
 bookdown::epub_book: default
+repo: https://github.com/BITSS/first_book_solution
+output_dir: docs
+clean: [packages.bib, bookdown.bbl]
+edit: https://github.com/BITSS/first_book_solution/edit/master/%s

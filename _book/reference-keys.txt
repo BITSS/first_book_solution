@@ -1,6 +1,0 @@
-hands-on-excercise-the-birthday-problem
-the-birthday-problem-the-math
-code-for-the-math
-dont-like-math-lets-run-a-simple-simulation
-code-for-the-simulation
-results
