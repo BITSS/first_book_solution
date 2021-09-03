@@ -1,9 +1,8 @@
 book_filename: "first_book"
-delete_merged_file: true
 language:
   ui:
     chapter_name: "Chapter "
-bookdown::epub_book: default
+delete_merged_file: true
 repo: https://github.com/BITSS/first_book_solution
 output_dir: docs
 clean: [packages.bib, bookdown.bbl]
