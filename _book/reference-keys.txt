@@ -1,0 +1,16 @@
+fig:nice-fig
+tab:nice-tab
+hands-on-excercise-the-birthday-problem
+the-birthday-problem-the-math
+the-birthday-problem-the-math-1
+code-for-the-math
+dont-like-math-lets-run-a-simple-simulation
+code-for-the-simulation
+results
+intro
+literature
+methods
+applications
+example-one
+example-two
+final-words
